@@ -4,22 +4,12 @@ Configuration for RAG-based Concept Unlearning.
 Set API keys as environment variables:
   ANTHROPIC_API_KEY  — for Claude backend
   OPENAI_API_KEY     — for OpenAI backend
-
-Or override the constants below directly.
-
-── Preset: use Llama-2-7b-chat via Ollama as LLMun ──────────────────────────
-  First pull the model:  ollama pull llama2:7b-chat
-  Then set:
-    LLMUN_BACKEND = "ollama"
-    LLMUN_MODEL   = "llama2:7b-chat"
-  LLMcons still needs an API-based model (Claude or OpenAI) to generate Q.
 """
 
 import os
 
 # ── LLMun: the target model being "unlearned" ──────────────────────────────
 # Backend: "claude" | "openai" | "ollama"
-# To use Llama-2-7b locally: LLMUN_BACKEND="ollama", LLMUN_MODEL="llama2:7b-chat"
 LLMUN_BACKEND: str = os.getenv("LLMUN_BACKEND", "openai")
 LLMUN_MODEL: str   = os.getenv("LLMUN_MODEL",   "gpt-4o")
 
