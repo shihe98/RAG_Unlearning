@@ -33,8 +33,7 @@ At inference, the query is embedded and compared against the KB. If cosine simil
 ```bash
 pip install -r requirements.txt
 
-# Local model via Ollama (recommended for LLMun)
-ollama pull llama2:7b-chat
+# Closed-source model via gpt-4o / Local model via Ollama
 
 # Set API keys
 export OPENAI_API_KEY=sk-your-own-apk-key
