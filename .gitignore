@@ -1,0 +1,28 @@
+# ChromaDB local database
+chroma_db/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+notebooks/.ipynb_checkpoints/
+
+# OS
+.DS_Store
+
+# Editor
+.vscode/
+.idea/
+
+# Secrets / local config overrides
+.env
+*.env
